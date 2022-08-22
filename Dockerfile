@@ -1,9 +1,10 @@
-FROM busybox
+FROM alpine
 
 WORKDIR /app
-COPY ./start.sh /app/
+RUN apk add lighttpd
+COPY lighttpd.conf /app/
 
 ENV PORT 8080
 ENV PUBLIC_DIR /public
 
-CMD ["/app/start.sh"]
+CMD ["lighttpd", "-D", "-f", "/app/lighttpd.conf"]
