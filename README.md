@@ -1,6 +1,6 @@
 # docker-httpd
 
-A small wrapper around lighttpd, useful as a really tiny http static web server
+A small wrapper around nginx, useful as a http static web server
 
 Usage:
 

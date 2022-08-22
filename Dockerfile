@@ -1,10 +1,5 @@
-FROM alpine
+FROM nginx:alpine
 
-WORKDIR /app
-RUN apk add lighttpd
-COPY lighttpd.conf /app/
-
+COPY default.conf.template /etc/nginx/templates/
 ENV PORT 8080
 ENV PUBLIC_DIR /public
-
-CMD ["lighttpd", "-D", "-f", "/app/lighttpd.conf"]
