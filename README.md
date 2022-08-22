@@ -1,7 +1,9 @@
 # docker-httpd
-A small wrapper around busybox httpd, useful as a really tiny http static web server
+
+A small wrapper around lighttpd, useful as a really tiny http static web server
 
 Usage:
+
 ```docker
 FROM thesilican/httpd
 
